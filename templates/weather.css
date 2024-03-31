@@ -1,0 +1,400 @@
+/* Reset default margin and padding */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the container */
+.container {
+    width: 90%; /* Use a percentage width */
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Media query for screens smaller than 768px (tablets and mobiles) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjust width for smaller screens */
+        max-width: none; /* Remove max-width */
+    }
+}
+
+/* Media query for screens smaller than 425px (mobiles) */
+@media (max-width: 425px) {
+    .container {
+        width: 90%; /* Adjust width for smaller screens */
+        max-width: none; /* Remove max-width */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Style the heading */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Style the search container */
+.search-container {
+    margin-bottom: 20px;
+}
+
+/* Style the input and button */
+input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    max-width: 300px; /* Limit maximum width to 300px */
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Media query for screens smaller than 768px (tablets and mobiles) */
+@media (max-width: 768px) {
+    input[type="text"] {
+        width: 100%; /* Make input field full width */
+        margin-right: 0;
+        margin-bottom: 10px; /* Add margin bottom for spacing */
+    }
+
+    .search-container {
+        display: flex;
+        flex-direction: column; /* Stack input and button vertically */
+    }
+}
+
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Style the weather forecast container */
+.weather-container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Media query for screens smaller than 768px (tablets and mobiles) */
+@media (max-width: 768px) {
+    .weather-container {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Media query for screens smaller than 425px (mobiles) */
+@media (max-width: 425px) {
+    .weather-container {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Style the weather forecast content */
+.weather-forecast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 100px; /* Adjusted margin for laptops */
+}
+
+/* Media query for screens smaller than 1024px (laptops and tablets) */
+@media (max-width: 1024px) {
+    .weather-forecast {
+        margin-top: 50px; /* Reduce margin for laptops */
+    }
+}
+
+/* Media query for screens smaller than 768px (tablets and mobiles) */
+@media (max-width: 768px) {
+    .weather-forecast {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items horizontally */
+        margin-top: 30px; /* Adjust margin for tablets */
+    }
+}
+
+/* Media query for screens smaller than 425px (mobiles) */
+@media (max-width: 425px) {
+    .weather-forecast {
+        margin-top: 20px; /* Adjust margin for mobiles */
+    }
+}
+/* Style the weather forecast content's width and padding */
+.weather-forecast-content {
+    width: calc(32% - 10px);
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+/* Media query for screens smaller than 1024px (laptops and tablets) */
+@media (max-width: 1024px) {
+    .weather-forecast-content {
+        width: calc(50% - 10px); /* Adjust width for laptops and tablets */
+    }
+}
+
+/* Media query for screens smaller than 768px (tablets and mobiles) */
+@media (max-width: 768px) {
+    .weather-forecast-content {
+        width: calc(50% - 10px); /* Adjust width for tablets */
+    }
+}
+
+/* Media query for screens smaller than 425px (mobiles) */
+@media (max-width: 425px) {
+    .weather-forecast-content {
+        width: calc(100% - 10px); /* Adjust width for mobiles */
+    }
+}
+/* Style the weather image container */
+.weather-image-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+/* Media query for screens smaller than 1024px (laptops and tablets) */
+@media (max-width: 1024px) {
+    .weather-image-container {
+        margin-bottom: 8px; /* Adjust margin for laptops and tablets */
+    }
+}
+
+/* Media query for screens smaller than 768px (tablets and mobiles) */
+@media (max-width: 768px) {
+    .weather-image-container {
+        margin-bottom: 6px; /* Adjust margin for tablets */
+    }
+}
+
+/* Media query for screens smaller than 425px (mobiles) */
+@media (max-width: 425px) {
+    .weather-image-container {
+        margin-bottom: 4px; /* Adjust margin for mobiles */
+    }
+}
+/* Style the weather image */
+.weather-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+}
+
+/* Media query for screens smaller than 1024px (laptops and tablets) */
+@media (max-width: 1024px) {
+    .weather-image {
+        width: 90%; /* Adjust width for laptops and tablets */
+    }
+}
+
+/* Media query for screens smaller than 768px (tablets and mobiles) */
+@media (max-width: 768px) {
+    .weather-image {
+        width: 80%; /* Adjust width for tablets */
+    }
+}
+
+/* Media query for screens smaller than 425px (mobiles) */
+@media (max-width: 425px) {
+    .weather-image {
+        width: 70%; /* Adjust width for mobiles */
+    }
+}
+/* Style the temperature, conditions, and details elements */
+.temperature,
+.conditions,
+.details {
+    margin-bottom: 10px;
+}
+
+/* Style the details list */
+.details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style the details list items */
+.details-list-item {
+    margin-bottom: 5px; /* Adjust margin between list items */
+}
+
+/* Media query for screens smaller than 1024px (laptops and tablets) */
+@media (max-width: 1024px) {
+    .temperature,
+    .conditions,
+    .details {
+        margin-bottom: 8px; /* Adjust margin for laptops and tablets */
+    }
+    .details-list-item {
+        margin-bottom: 4px; /* Adjust margin between list items for laptops and tablets */
+    }
+}
+
+/* Media query for screens smaller than 768px (tablets and mobiles) */
+@media (max-width: 768px) {
+    .temperature,
+    .conditions,
+    .details {
+        margin-bottom: 6px; /* Adjust margin for tablets and mobiles */
+    }
+    .details-list-item {
+        margin-bottom: 3px; /* Adjust margin between list items for tablets and mobiles */
+    }
+}
+
+/* Media query for screens smaller than 425px (mobiles) */
+@media (max-width: 425px) {
+    .temperature,
+    .conditions,
+    .details {
+        margin-bottom: 4px; /* Adjust margin for mobiles */
+    }
+    .details-list-item {
+        margin-bottom: 2px; /* Adjust margin between list items for mobiles */
+    }
+}
+/* Style the temperature, conditions, and details elements */
+.temperature,
+.conditions,
+.details {
+    margin-bottom: 10px;
+}
+
+/* Style the details list */
+.details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style the details list items */
+.details-list-item {
+    margin-bottom: 5px; /* Adjust margin between list items */
+}
+
+/* Media query for screens smaller than 1024px (laptops and tablets) */
+@media (max-width: 1024px) {
+    .temperature,
+    .conditions,
+    .details {
+        margin-bottom: 8px; /* Adjust margin for laptops and tablets */
+    }
+    .details-list-item {
+        margin-bottom: 4px; /* Adjust margin between list items for laptops and tablets */
+    }
+}
+
+/* Media query for screens smaller than 768px (tablets and mobiles) */
+@media (max-width: 768px) {
+    .temperature,
+    .conditions,
+    .details {
+        margin-bottom: 6px; /* Adjust margin for tablets and mobiles */
+    }
+    .details-list-item {
+        margin-bottom: 3px; /* Adjust margin between list items for tablets and mobiles */
+    }
+}
+
+/* Media query for screens smaller than 425px (mobiles) */
+@media (max-width: 425px) {
+    .temperature,
+    .conditions,
+    .details {
+        margin-bottom: 4px; /* Adjust margin for mobiles */
+    }
+    .details-list-item {
+        margin-bottom: 2px; /* Adjust margin between list items for mobiles */
+    }
+}
+
+/* Media query for all screens */
+@media (max-width: 1024px) {
+    .details ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+}
+/* Style the details list items */
+.details li {
+    margin-bottom: 5px;
+}
+
+/* Style the a tag (Details) */
+a {
+    text-decoration: none;
+    color: #007bff;
+    padding: 5px;
+    border: 1px solid #007bff;
+    border-radius: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+/* Media query for screens smaller than 768px (tablets and mobiles) */
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .details li {
+        margin-bottom: 3px; /* Adjust margin for tablets and mobiles */
+    }
+    
+    a {
+        padding: 4px; /* Adjust padding for tablets and mobiles */
+        border-radius: 15px; /* Adjust border radius for tablets and mobiles */
+    }
+}
+
+/* Media query for screens smaller than 425px (mobiles) */
+@media (max-width: 425px) {
+    /* Further adjustments for mobile devices */
+    .details li {
+        margin-bottom: 2px; /* Adjust margin for mobiles */
+    }
+    
+    a {
+        padding: 3px; /* Adjust padding for mobiles */
+        border-radius: 10px; /* Adjust border radius for mobiles */
+    }
+}
+a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Media queries for smaller screens */
+@media screen and (max-width: 768px) {
+    .weather-forecast-content {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Adjust styles for screens smaller than 480px */
+}

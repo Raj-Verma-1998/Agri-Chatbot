@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Add this to your HTML head section -->
+<title>Weather Forecasting</title>
+<link rel="stylesheet" href="weather.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Weather Forecasting</h1>
+    <div class="search-container">
+      <input type="text" id="locationInput" placeholder="Enter location...">
+      <button onclick="searchWeather()">Search</button>
+    </div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper" id="weatherSlider">
+        <!-- Weather cards will be dynamically populated here -->
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+    <div class="weather-container" id="weatherContainer">
+      <!-- Weather data will be displayed here -->
+    </div>
+  </div>
+<!-- Add this at the end of your HTML body -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="weather.js"></script>
+</body>
+</html>
