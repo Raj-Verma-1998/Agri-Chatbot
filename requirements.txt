@@ -26,6 +26,7 @@ pyats.results==24.3
 requestRender==0.0.3
 collective.jsonify==1.6
 openai==1.14.3
+openai2==1.7
 os2024==0.4.0
 nltk==3.8.1
 tea==0.1.7
