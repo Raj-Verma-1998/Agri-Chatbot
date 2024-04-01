@@ -37,6 +37,3 @@ def messager():
         print(f"OpenAI API Error: {e}")
         return "I'm currently having some trouble. Please try again later."
 
-
-if __name__ == '__main__':
-    app.run(debug=True)
