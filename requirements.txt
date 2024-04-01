@@ -23,7 +23,7 @@ Werkzeug==3.0.1
 requests==2.31.0
 typed_dotenv==2.0.2
 pyats.results==24.3
-requestrender==50 9.2.7
+requestRender==0.0.3
 collective.jsonify==1.6
 openai==1.14.3
 os2024==0.4.0
