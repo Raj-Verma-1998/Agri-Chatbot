@@ -176,6 +176,7 @@ body, html {
   padding: 10px 15px;
 }
 
+
 /* Style for the input field */
 .chatbot-input {
   flex: 1; /* Take remaining space */
@@ -197,6 +198,12 @@ body, html {
   cursor: pointer;
   transition: background-color 0.3s;
 }
+.chatbot-input::placeholder { 
+  color: #999;  
+  font-style: italic;
+  padding-left: 50px; /* Indent from the left by 10px */
+  padding-top: 8px;
+} 
 
 /* Media query for screens smaller than 768px (tablets and mobiles) */
 @media (max-width: 768px) {
@@ -215,26 +222,39 @@ body, html {
     padding: 6px 12px; /* Example adjustment */
     font-size: 12px; /* Example adjustment */
   }
+ 
 }
 
 /* Media query for screens smaller than 425px (mobiles) */
 @media (max-width: 425px) {
   /* Further adjustments for mobile devices */
   .input-container {
-    padding: 6px 10px; /* Example adjustment */
+    padding: 10px 10px; /* Example adjustment */
   }
   
   .chatbot-input {
     font-size: 10px; /* Example adjustment */
-    padding: 3px; /* Example adjustment */
-    margin-right: 6px; /* Example adjustment */
-  }
+    padding: 5px; /* Example adjustment */
+    margin-right: 03px; /* Example adjustment */
+    display: flex;
+    border: #333 solid 2px;
   
+  }
+  .chatbot-input::placeholder { 
+  color: #999;  
+  font-style: italic;
+  padding-left: 30px; /* Indent from the left by 10px */
+  padding-top: 5px;
+} 
+
   .chatbot-btn {
     padding: 4px 10px; /* Example adjustment */
     font-size: 10px; /* Example adjustment */
   }
+  
+
 }
+
 /* Style for user's message */
 .userclass {
   text-align: right;
@@ -406,8 +426,8 @@ body, html {
 <div class="chatbot-container">
   <marquee class="marq" direction="left" loop="">
     <div class="gek1">
-         WEL-COME BUDY !
-         Can I Help You ?
+         WEL-COME BUDY 😊
+        How Can I Help You ?
     </div>
 </marquee>  
   <div class="chatbot-header">Agriculture Bot</div>
