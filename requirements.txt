@@ -28,3 +28,4 @@ collective.jsonify==1.6
 openai==1.14.3
 os2024==0.4.0
 nltk==3.8.1
+tea==0.1.7
