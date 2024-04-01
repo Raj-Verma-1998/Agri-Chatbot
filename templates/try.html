@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<html lang="hindi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -120,6 +119,7 @@ body, html {
 /* Media query for screens smaller than 425px (mobiles) */
 @media (max-width: 425px) {
   .chatbot-container {
+    
     width: 90vw; /* Adjust width for mobiles */
   }
 }
@@ -356,19 +356,30 @@ body, html {
 @media (max-width: 425px) {
     /* Further adjustments for mobile devices */
     .weather-container {
-        top: 5px;
-        right: 5px;
+        top: 1px;
+        left: 98px;
+        height: 58px;
+        width: 70px;
+        right: 2px;
         padding: 6px;
+        /* border: 2px solid black; */
     }
 
     #weather-icon {
-        width: 60px;
-        height: 60px;
+        
+        width: 85px;
+        height: 85px;
         margin-bottom: 5px; /* Adjust margin for smaller screens */
     }
 
     #weather-info {
+        width: 120px;
         font-size: 12px;
+        margin-left: 80px;
+        right: 20px;
+        /* border: 2px solid black; */
+        margin-top: -95px;
+        
     }
 }
     </style>
