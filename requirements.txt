@@ -24,6 +24,7 @@ requests==2.31.0
 typed_dotenv==2.0.2
 pyats.results==24.3
 requestRender==0.0.3
+json5==0.9.24
 collective.jsonify==1.6
 openai==1.14.3
 openai2==1.7
