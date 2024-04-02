@@ -232,86 +232,42 @@
             
          ],
          "responses": [
-            "For any queries about schemes <a target=\"_blank\" href=\"https://github.com/Raj-Verma-1998/Agriculture_Bot.git\"><u>click here</u></a>"            
+            "For any queries about schemes <a target=\"_blank\" href=\"https://adil200.github.io/Farmer-Schemes/\"><u>click here</u></a>"            
          ]
       },
       {
-         "tag": "Agriculture_bot",
+         "tag": "farmer_assistance",
          "patterns": [
-           "How can I get assistance for farming?",
-           "Is there any support available for farmers?",
-           "I need guidance on agricultural practices.",
-           "Can you help me with farming techniques?",
-           "What resources are available for farmers?"
+            "How can I get assistance for farming?",
+            "Is there any support available for farmers?",
+            "I need guidance on agricultural practices.",
+            "Can you help me with farming techniques?",
+            "What resources are available for farmers?"
          ],
          "responses": [
-           "Certainly! I can provide information on farming techniques, crop management, and more. How can I assist you today?",
-           "Farmers can access resources on sustainable farming, crop selection, and more. How can I help you with your farming queries?",
-           "Whether it's about crop yield improvement or soil management, feel free to ask any farming-related questions. I'm here to help!",
-           "Farmers often seek assistance in various aspects of agriculture. How can I guide you with your farming concerns?"
+            "Certainly! I can provide information on farming techniques, crop management, and more. How can I assist you today?",
+            "Farmers can access resources on sustainable farming, crop selection, and more. How can I help you with your farming queries?",
+            "Whether it's about crop yield improvement or soil management, feel free to ask any farming-related questions. I'm here to help!",
+            "Farmers often seek assistance in various aspects of agriculture. How can I guide you with your farming concerns?"
+         ]
+      },
+      {
+         "tag": "pest_management",
+         "patterns": [
+            "How do I control pests in my crops?",
+            "Can you suggest methods for pest management?",
+            "Dealing with crop pests, any advice?",
+            "What are effective ways to prevent crop diseases?",
+            "Pest control tips for farmers?"
          ],
-         "questions": [
-           {
-             "category": "General Farming",
-             "questions": [
-               "What crops grow best in my climate and soil type?",
-               "How do I start a small-scale farm?",
-               "What are the essential tools and equipment for farming?"
-             ]
-             "responses": [
-               "To determine the best crops, I'll need information about your climate zone, soil test results, and resources. Can you provide those?",
-               "Let's discuss your goals, land availability, and budget to plan your small-scale farm. Do you have a specific size or type of farm in mind?",
-               "The essential tools depend on your crops and scale. Can you tell me more about what you plan to grow?"
-         
-             ]
-           },
-           {
-             "category": "Crop-Specific",
-             "questions": [
-               "What are the best planting times for [crop name]?",
-               "How much spacing do I need for [crop name]?"
-             ],
-             "responses": [
-               "Knowing your region will help me provide accurate planting times for [crop name]. Where is your farm located?",
-               "Spacing for [crop name] depends on factors like variety and soil conditions. Can you provide more details?"
-     
-             ]
-       },
-         {
-            "tag": "pest_management",
-            "patterns": [
-     
-              "What are the most common pests for [crop name]?",
-              "How do I control [pest name] without harming beneficial insects?",
-              "What are the differences between insecticides, herbicides, and fungicides?", 
-              "How do I know if a pesticide is safe for my crops?",
-              "When is the best time to apply pesticides?",
-              "What are some natural alternatives to chemical pesticides?",
-              "How does crop rotation help with pest management?",
-              "What is companion planting and how does it deter pests?",
-              "How do weather conditions affect pest populations?", 
-              "Are there any early warning systems for pest outbreaks?",
-              "What is the economic threshold for pest control?", 
-              "How do I monitor my crops for signs of pest damage?",
-              "What should I do if I find a new or unusual pest?", 
-              "Are there regulations for pesticide use in my area?",
-              "Can I use beneficial insects to control pests in my greenhouse?",
-              "How can I attract beneficial insects to my garden?",
-              "What are pheromone traps and how do they work?",
-              "Is it safe to use neem oil on my vegetables?",
-              "How do I make a garlic spray for pest control?",
-              "What are the risks of DIY pest control methods?" 
-            ],
-            "responses": [
-      
-              "Knowing your region will help me provide the most common pests for [crop name]...",
-              "There are ways to control [pest name] while protecting pollinators. Let's discuss...",
-              "Insecticides, herbicides, and fungicides target different things. Here's a breakdown...",
-              "Always read labels carefully. Look for products approved for your crop and specific pest...."
-
-            ]
-          }
-          {
+         "responses": [
+            "Pest management is crucial for crop health. Consider using natural predators, proper crop rotation, and organic pesticides. Need more specific advice?",
+            "To control pests, integrated pest management (IPM) is effective. It combines biological, cultural, and chemical methods. How can I assist you further?",
+            "Farmers often combat pests through various strategies. What specific pests are you dealing with, and I can provide targeted advice?",
+            "Preventing crop diseases involves maintaining good hygiene, timely harvesting, and using disease-resistant crop varieties. Need guidance on a specific issue?"
+         ]
+      },
+      {
          "tag": "crop_selection",
          "patterns": [
             "How do I choose the right crops for my farm?",
