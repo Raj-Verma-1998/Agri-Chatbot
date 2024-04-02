@@ -256,39 +256,31 @@
              "questions": [
                "What crops grow best in my climate and soil type?",
                "How do I start a small-scale farm?",
-               "What are the essential tools and equipment for farming?",
-               "...",  // rest of your 'General Farming' questions
-             ],
+               "What are the essential tools and equipment for farming?"
+             ]
              "responses": [
                "To determine the best crops, I'll need information about your climate zone, soil test results, and resources. Can you provide those?",
                "Let's discuss your goals, land availability, and budget to plan your small-scale farm. Do you have a specific size or type of farm in mind?",
-               "The essential tools depend on your crops and scale. Can you tell me more about what you plan to grow?",
-               "..."  // Add responses for remaining 'General Questions' 
+               "The essential tools depend on your crops and scale. Can you tell me more about what you plan to grow?"
+         
              ]
            },
            {
              "category": "Crop-Specific",
              "questions": [
                "What are the best planting times for [crop name]?",
-               "How much spacing do I need for [crop name]?", 
-               "...", // rest of the crop-specific questions
+               "How much spacing do I need for [crop name]?"
              ],
              "responses": [
                "Knowing your region will help me provide accurate planting times for [crop name]. Where is your farm located?",
-               "Spacing for [crop name] depends on factors like variety and soil conditions. Can you provide more details?",
-               "..." // Add responses for remaining 'Crop-Specific' questions
+               "Spacing for [crop name] depends on factors like variety and soil conditions. Can you provide more details?"
+     
              ]
-           },
-           // Add similar structures for the "Livestock" and "Technology in Farming" categories 
-         ]
        },
-      {
          {
             "tag": "pest_management",
             "patterns": [
-              // ... your existing patterns ...
-          
-              // New Questions
+     
               "What are the most common pests for [crop name]?",
               "How do I control [pest name] without harming beneficial insects?",
               "What are the differences between insecticides, herbicides, and fungicides?", 
@@ -299,7 +291,7 @@
               "What is companion planting and how does it deter pests?",
               "How do weather conditions affect pest populations?", 
               "Are there any early warning systems for pest outbreaks?",
-              "What is the economic threshold for pest control?", // More advanced concept
+              "What is the economic threshold for pest control?", 
               "How do I monitor my crops for signs of pest damage?",
               "What should I do if I find a new or unusual pest?", 
               "Are there regulations for pesticide use in my area?",
@@ -311,14 +303,12 @@
               "What are the risks of DIY pest control methods?" 
             ],
             "responses": [
-               // ...your existing responses ...
-          
-              // Response starting points (You'll need to fill these out)
+      
               "Knowing your region will help me provide the most common pests for [crop name]...",
               "There are ways to control [pest name] while protecting pollinators. Let's discuss...",
               "Insecticides, herbicides, and fungicides target different things. Here's a breakdown...",
-              "Always read labels carefully. Look for products approved for your crop and specific pest....",
-              // ... Add more responses here ...
+              "Always read labels carefully. Look for products approved for your crop and specific pest...."
+
             ]
           }
           {
