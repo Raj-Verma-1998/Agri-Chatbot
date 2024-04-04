@@ -92,8 +92,31 @@ def messager():
 
         # Logic to fetch weather forecast if user asks about weather (existing logic)
         if "weather" in user_msg.lower():
-            # Your existing logic for fetching weather forecast
-            pass
+            try:
+                # Fetch weather forecast from Weather API
+                # Extract location from user message
+                location = extract_location(user_msg)
+
+                # Fetch weather forecast from Weather API
+                weather_api_url = f"https://api.openweathermap.org/data/2.5/forecast?q={location}&appid={WEATHER_API_KEY}&units=metric"
+                weather_response = requests.get(weather_api_url)
+                weather_response.raise_for_status()
+
+                weather_data = weather_response.json()
+                forecast = weather_data['list']  # 'list' contains forecast data
+                weather_info = f"\n\nWeather Forecast for {location}:\n"  # Fix: use f-string to format location
+                for day in forecast:
+                    date = day['dt_txt']
+                    condition = day['weather'][0]['description']
+                    max_temp = day['main']['temp_max']
+                    min_temp = day['main']['temp_min']
+                    weather_info += f"{date}: {condition}, Max Temp: {max_temp}°C, Min Temp: {min_temp}°C\n"
+
+                bot_response += weather_info
+
+            except requests.exceptions.RequestException as e:
+                print(f"Weather API Error: {e}")
+                bot_response += "\n\nSorry, weather forecast is currently unavailable. Please try again later."
 
         # Logic to fetch pest management information
         if "pest management" in user_msg.lower():
