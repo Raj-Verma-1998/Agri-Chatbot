@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agriculture</title>
+    <title>Echo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/1L_dstPt3HV5HzF6Gvk/e3s4Wz6iJgD/+ub2oU" crossorigin="anonymous">
     <!-- Your additional styles -->
@@ -40,12 +40,11 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-image: url('https://ichef.bbci.co.uk/news/1024/cpsprodpb/9B52/production/_120726793_astromovingaroundhome.jpg.webp');
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
     filter: blur(4px); /* Adjust blur intensity */
-    -webkit-filter: blur(3px);
+    -webkit-filter: blur(10px);
     z-index: -1; /* Place behind content */
 }
 
@@ -125,12 +124,14 @@ body, html {
 }
 /* Style for the header */
 .chatbot-header {
-  background-color: #80d2d2d5; /* Light gray background */
+  background-color: #80d284d5; /* Light gray background */
   border-bottom: 1px solid #ccc; /* Light gray border */
-  color: #333; /* Dark text color */
-  padding: 10px;
+  color: #0d0806e7; /* Dark text color */
+  padding: 06px;
   text-align: center;
   font-weight: bold;
+  font-style: italic;
+  font-size: large;
 }
 
 /* Style for the chat messages area */
@@ -172,8 +173,8 @@ body, html {
 /* Style for the input field and send button container */
 .input-container {
   display: flex;
-  align-items: center;
-  padding: 10px 15px;
+  align-items: 20px;
+  padding: 09px;
 }
 
 
@@ -181,10 +182,14 @@ body, html {
 .chatbot-input {
   flex: 1; /* Take remaining space */
   padding: 5px; /* Adjusted padding */
-  border: 1px solid #ccc; /* Light gray border */
-  border-radius: 15px;
+  border: 5px solid #ccc; /* Light gray border */
+  border-radius: 10px;
   margin-right: 10px; /* Adjusted margin */
-  font-size: 14px;
+  margin-left: 05px;
+  font-size: 16px;
+  box-sizing: border-box;
+  width: 100%; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
 }
 
 /* Style for the button */
@@ -203,6 +208,7 @@ body, html {
   font-style: italic;
   padding-left: 50px; /* Indent from the left by 10px */
   padding-top: 8px;
+  padding-top: 1px;
 } 
 
 /* Media query for screens smaller than 768px (tablets and mobiles) */
@@ -426,18 +432,18 @@ body, html {
 <div class="chatbot-container">
   <marquee class="marq" direction="left" loop="">
     <div class="gek1">
-         WEL-COME BUDY 😊
-        How Can I Help You ?
+         WEL-COME BUDDY 😊
+        How Can I Assist You ?
     </div>
 </marquee>  
-  <div class="chatbot-header">Agriculture Bot</div>
+  <div class="chatbot-header">EchoBot</div>
 
   <div class="chatbot-messages" id="chatbot-messages">
     <!-- Bot's initial greeting message -->
     <div class="botclass">Welcome! How can I assist you?</div>
   </div>
   <div class="input-container">
-    <textarea class="form-control chatbot-input" aria-label="Chat input" id="usermsg" placeholder="Enter your message" onkeypress="handleKeyPress(event)"></textarea>
+    <textarea class="form-control chatbot-input" aria-label="Chat-input" id="usermsg" placeholder="Enter your message" onkeypress="handleKeyPress(event)"></textarea>
     <button class="btn btn-primary chatbot-btn" onclick="sendMessage()" type="button" id="sendbutton" aria-label="Send message">
         <i class="fas fa-paper-plane"></i> <!-- Font Awesome icon for send -->
     </button>
@@ -456,34 +462,36 @@ body, html {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Your additional scripts -->
     <script>
-     function sendMessage() {
-    var userMessage = document.getElementById("usermsg").value.trim(); // Trim whitespace from the user's message
-    if (!userMessage) return; // Do not send empty messages
+   function sendMessage(userMessage) {
+      if (!userMessage.trim()) return;
 
-    var chatMessages = document.getElementById("chatbot-messages");
+      var chatMessages = document.getElementById("chatbot-messages");
 
-    // Display user's message in the chat
-    var userMessageElement = document.createElement("div");
-    userMessageElement.classList.add("userclass");
-    userMessageElement.textContent = userMessage;
-    chatMessages.appendChild(userMessageElement);
+      // Save user's message in local storage
+      saveUserMessage(userMessage);
 
-    // Display typing indicator while waiting for the bot's response
-    var typingIndicator = document.createElement("div");
-    typingIndicator.classList.add("typing-indicator");
-    typingIndicator.innerText = "Typing...";
-    chatMessages.appendChild(typingIndicator);
+      // Display user's message in the chat
+      var userMessageElement = document.createElement("div");
+      userMessageElement.classList.add("userclass");
+      userMessageElement.textContent = userMessage;
+      chatMessages.appendChild(userMessageElement);
 
-    // Send user's message to the server
-    fetch('/messager', {
+      // Display typing indicator while waiting for the bot's response
+      var typingIndicator = document.createElement("div");
+      typingIndicator.classList.add("typing-indicator");
+      typingIndicator.innerText = "Typing...";
+      chatMessages.appendChild(typingIndicator);
+
+      // Send user's message to the server
+      fetch('/messager', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({ message: userMessage })
-    })
-    .then(response => response.text())
-    .then(botResponse => {
+      })
+      .then(response => response.text())
+      .then(botResponse => {
         // Remove typing indicator
         chatMessages.removeChild(typingIndicator);
 
@@ -493,84 +501,106 @@ body, html {
         botMessageElement.textContent = botResponse;
         chatMessages.appendChild(botMessageElement);
 
-        // Scroll to the bottom of the chat window to show the latest message
+        // Scroll to the bottom of the chat window
         chatMessages.scrollTop = chatMessages.scrollHeight;
-    })
-    .catch(error => {
+      })
+      .catch(error => {
         console.error('Error sending message:', error);
         // Display error message in the chat
         var errorMessageElement = document.createElement("div");
         errorMessageElement.classList.add("botclass");
         errorMessageElement.textContent = "Sorry, something went wrong. Please try again later.";
         chatMessages.appendChild(errorMessageElement);
-    });
+      });
 
-    // Clear the input field after sending the message
-    document.getElementById("usermsg").value = '';
-}
-// Add event listener to input field for the keypress event
-document.getElementById("usermsg").addEventListener("keypress", function(event) {
-    // Check if the key pressed is the Enter key
-    if (event.key === "Enter") {
-        // Prevent default form submission behavior
-        event.preventDefault();
-        // Call the sendMessage function
-        sendMessage();
+      // Clear the input field after sending the message
+      document.getElementById("usermsg").value = '';
     }
-    }); 
-    async function fetchWeatherByLocation() {
-            const apiKey = 'c9c3f289f9a98421ddf3e808330ceb3c'; // Replace with your OpenWeatherMap API key 
 
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(success, error);
-            } else {
-                document.getElementById("weather-info").innerHTML = "Geolocation is not supported by this browser.";
-            }
-
-            async function success(position) {
-                const lat = position.coords.latitude;
-                const lon = position.coords.longitude;
-                const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-                await fetchWeather(apiUrl);
-            }
-
-            function error() {
-                document.getElementById("weather-info").innerHTML = "Unable to retrieve your location.";
-            }
-
-            async function fetchWeather(apiUrl) {
-                try {
-                    const response = await fetch(apiUrl);
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    const data = await response.json();
-                    displayWeather(data);
-                } catch (error) {
-                    console.error('Error fetching weather data:', error);
-                    document.getElementById("weather-info").innerHTML = 'Error fetching weather data. Please try again later.';
-                }
-            }
-
-            function displayWeather(data) {
-                const description = data.weather[0].description;
-                const temperature = data.main.temp;
-                const cityName = data.name;
-                const country = data.sys.country;
-                const iconCode = data.weather[0].icon;
-                const iconUrl = `http://openweathermap.org/img/wn/${iconCode}.png`;
-
-                document.getElementById("weather-icon").src = iconUrl; // Update icon
-                document.getElementById("weather-info").innerHTML = `
-                    City: ${cityName}, Country: ${country}<br>
-                    Weather: ${description}<br>
-                    Temperature: ${temperature}°C
-                `;
-            }
+    function saveUserMessage(message) {
+      if (typeof(Storage) !== "undefined") {
+        try {
+          localStorage.setItem("user_message", message);
+        } catch (error) {
+          console.error("Error saving message to local storage:", error);
+          // Handle the error here, potentially display a message to the user
         }
-        // Initial Fetch (call on page load)
-        fetchWeatherByLocation();
+      } else {
+        console.log("Local storage is not supported by this browser.");
+      }
+    }
 
-    </script>
-    </body>
-    </html>
+    function getUserMessage() {
+      var message = localStorage.getItem("user_message");
+      if (message !== null) {
+        document.getElementById("usermsg").value = message;
+        localStorage.removeItem("user_message");
+      }
+    }
+
+    window.onload = getUserMessage;
+
+    document.getElementById("usermsg").addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        var userMessage = document.getElementById("usermsg").value.trim();
+        sendMessage(userMessage);
+      }
+    });
+      async function fetchWeatherByLocation() {
+          const apiKey = 'c9c3f289f9a98421ddf3e808330ceb3c'; // Replace with your OpenWeatherMap API key 
+  
+          if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(success, error);
+          } else {
+              document.getElementById("weather-info").innerHTML = "Geolocation is not supported by this browser.";
+          }
+  
+          async function success(position) {
+              const lat = position.coords.latitude;
+              const lon = position.coords.longitude;
+              const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+              await fetchWeather(apiUrl);
+          }
+  
+          function error() {
+              document.getElementById("weather-info").innerHTML = "Unable to retrieve your location.";
+          }
+  
+          async function fetchWeather(apiUrl) {
+              try {
+                  const response = await fetch(apiUrl);
+                  if (!response.ok) {
+                      throw new Error('Network response was not ok');
+                  }
+                  const data = await response.json();
+                  displayWeather(data);
+              } catch (error) {
+                  console.error('Error fetching weather data:', error);
+                  document.getElementById("weather-info").innerHTML = 'Error fetching weather data. Please try again later.';
+              }
+          }
+  
+          function displayWeather(data) {
+              const description = data.weather[0].description;
+              const temperature = data.main.temp;
+              const cityName = data.name;
+              const country = data.sys.country;
+              const iconCode = data.weather[0].icon;
+              const iconUrl = `http://openweathermap.org/img/wn/${iconCode}.png`;
+  
+              document.getElementById("weather-icon").src = iconUrl; // Update icon
+              document.getElementById("weather-info").innerHTML = `
+                  City: ${cityName}, Country: ${country}<br>
+                  Weather: ${description}<br>
+                  Temperature: ${temperature}°C
+              `;
+          }
+      }
+  
+      // Initial Fetch (call on page load)
+      fetchWeatherByLocation();
+  </script>
+  
+  
+
